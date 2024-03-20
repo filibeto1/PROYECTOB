@@ -29,7 +29,9 @@ export default function Navigation() {
               <NavDropdown.Item href="/agregarContrato">
                 Agregar Contrato
               </NavDropdown.Item>
-
+              <NavDropdown.Item href="/agregarHorario">
+                Agregar Horario
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -37,3 +39,4 @@ export default function Navigation() {
     </Navbar>
   );
 }
+

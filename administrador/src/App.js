@@ -8,6 +8,9 @@ import MenuLateral from './Components/MenuLateral/MenuLateral';
 import AgregarSede from './Components/agregarsede/agregarsede';
 import AgregarArea from './Components/agregararea/agregararea';
 import AgregarContrato from './Components/contratos/agregarContrato'; // Importa el componente AgregarContrato
+import AgregarHorario from './Components/agregarHorario/agregarHorario';
+
+
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
           <Route path='/agregarSede' element={<AgregarSede />} />
           <Route path='/agregarArea' element={<AgregarArea />} />
           <Route path='/agregarContrato' element={<AgregarContrato />} /> {/* Agrega esta línea para el componente de gestión de contratos */}
+          <Route path='/agregarHorario' element={<AgregarHorario />} />
         </Routes>
       </Router>
     </div>

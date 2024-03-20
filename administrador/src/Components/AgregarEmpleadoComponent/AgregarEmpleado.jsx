@@ -26,7 +26,7 @@ export default function AgregarEmpleado() {
     Region: "",
     AreaTrabajo: "",
     Rol: "Empleado",
-  });
+  }); 
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [empleadoSeleccionado, setEmpleadoSeleccionado] = useState(null);
   const [valoresEmpleadoSeleccionado, setValoresEmpleadoSeleccionado] =

@@ -1,0 +1,170 @@
+/* archivo: agregarHorario.css */
+
+/*.container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    transition: box-shadow 0.3s;
+}*/
+
+/*.container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+/* Estilos para los filtros de búsqueda */
+.filtro-nombre,
+.filtro-apellido-paterno,
+.filtro-apellido-materno {
+  margin-bottom: 20px;
+}
+
+.filtro-nombre label,
+.filtro-apellido-paterno label,
+.filtro-apellido-materno label {
+  font-weight: bold;
+}
+
+.filtro-nombre input[type="text"],
+.filtro-apellido-paterno input[type="text"],
+.filtro-apellido-materno input[type="text"] {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+/* Otros estilos según tus preferencias */
+
+  
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-agregar-horario {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+}
+
+.btn-agregar-horario:hover {
+    background-color: #45a049;
+}
+
+.table {
+    text-align: justify;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+.table th {
+    background-color: #f2f2f2; /* Color de fondo para las cabeceras */
+}
+
+.boton-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filtro {
+    margin-left: 10px;
+}
+
+.titulo {
+    margin: 2%;
+    text-align: left;
+    color: #333333; /* Color del texto */
+}
+
+.btn-actualizar {
+    background-color: #00CED1; /* Color azul turquesa */
+    color: white;
+}
+
+.btn-actualizar:hover {
+    background-color: #008B8B;
+}
+
+.btn-eliminar {
+    background-color: #FF6347; /* Color rojo */
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #CD5C5C;
+}
+
+.filtros-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-item {
+    margin-right: 20px;
+  }
+  
+  .filtro-item label {
+    font-weight: bold;
+  }
+  
+  .filtro-item input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .filtro-item select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Ajustes adicionales según sea necesario */
+  
+
+  
