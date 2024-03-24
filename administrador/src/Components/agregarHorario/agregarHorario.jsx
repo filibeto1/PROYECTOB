@@ -144,30 +144,31 @@ const [razon, setRazon] = useState('');
     setShowAgregarModal(true);
 };
 
-    const eliminarSolicitud = (index) => {
-        if (index === null || index === undefined) {
-            console.error("No se ha seleccionado ninguna solicitud para eliminar.");
-            return;
-        }
-    
-        const idSolicitudEliminar = historial[index]._id;
-        if (!idSolicitudEliminar) {
-            console.error("No se pudo encontrar el ID de la solicitud a eliminar.");
-            return;
-        }
-    
-        axios.delete(`http://localhost:3002/horario/${idSolicitudEliminar}`)
-            .then(response => {
-                console.log('Solicitud eliminada correctamente del servidor:', response.data);
-                const updatedHistorial = historial.filter((solicitud, idx) => idx !== index);
-                setHistorial(updatedHistorial);
-                localStorage.setItem('historialSolicitudes', JSON.stringify(updatedHistorial));
-                setShowEliminarModal(false);
-            })
-            .catch(error => {
-                console.error('Error al eliminar la solicitud:', error);
-            });
-    };
+const eliminarSolicitud = (index) => {
+    if (index === null || index === undefined) {
+        console.error("No se ha seleccionado ninguna solicitud para eliminar.");
+        return;
+    }
+
+    const nombreEmpleadoEliminar = historial[index].nombreEmpleado;
+    if (!nombreEmpleadoEliminar) {
+        console.error("No se pudo encontrar el nombre del empleado para eliminar la solicitud.");
+        return;
+    }
+
+    axios.delete(`http://localhost:3002/horario/${nombreEmpleadoEliminar}`)
+        .then(response => {
+            console.log('Solicitud eliminada correctamente del servidor:', response.data);
+            const updatedHistorial = historial.filter((solicitud, idx) => idx !== index);
+            setHistorial(updatedHistorial);
+            localStorage.setItem('historialSolicitudes', JSON.stringify(updatedHistorial));
+            setShowEliminarModal(false);
+        })
+        .catch(error => {
+            console.error('Error al eliminar la solicitud:', error);
+        });
+};
+
     
 
     const abrirModalEliminar = (index) => {

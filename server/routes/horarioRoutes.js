@@ -13,6 +13,19 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Ruta para obtener un horario por su ID
+router.get('/:id', async (req, res) => {
+    try {
+        const horario = await Horario.findById(req.params.id);
+        if (!horario) {
+            return res.status(404).json({ message: 'Horario no encontrado' });
+        }
+        res.json(horario);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 // Ruta para crear un nuevo horario
 router.post('/', async (req, res) => {
     const horario = new Horario({
@@ -37,9 +50,10 @@ router.post('/', async (req, res) => {
 // Ruta para actualizar un horario
 router.patch('/:id', empleadoController.updateHorario); // Usa el controlador
 
-router.delete('/:id', async (req, res) => {
+// Ruta para eliminar un horario por su ID
+router.delete('/:nombre', async (req, res) => { // Cambia el parámetro de :id a :nombre
     try {
-        const horarioEliminado = await Horario.findByIdAndDelete(req.params.id);
+        const horarioEliminado = await Horario.findOneAndDelete({ nombreEmpleado: req.params.nombre }); // Busca y elimina por nombre
         if (!horarioEliminado) {
             return res.status(404).json({ message: "Horario no encontrado" });
         }
